@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sentirse Bien</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    <!--<link rel="stylesheet" href="styleChat.css">-->
+
+    <!-- Favicon -->
+    <link href="img/logo2.jpeg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style1.css" rel="stylesheet">
+    <!--link href="css/styleChat.css" rel="stylesheet"-->
+</head>
+
+<body>
+     <!-- Topbar Start -->
+ 
+    <!-- Navbar End -->
+    <!-- Header Start -->
+     <div class="inicio">
+        <div class="main-content">
+               <div class="welcome">
+                 <div class="chat-header">
+                    <h3>Regalate el día</h3>
+                </div>
+                <!-- Botón para abrir el formulario -->
+                <button id="openFormButton" class="btn btn-primary">Agendar Turno</button>
+            </div>
+            
+            
+ <!--EMPIEZA CLIENTE-->
+ <div class="classes">
+    <h3>Promociones</h3>
+    <button class="carousel-control prev btn btn-primary mt-2">←</button>
+    <div class="classes-container">
+        <div class="class-card">
+            <h4>Limpieza facial</h4>
+            <p> -50% (esta semana )</p>
+            <p>NO TE LO PIERDAS!</p>
+        </div>
+        <div class="class-card">
+            <h4>Masaje relajante</h4>
+            <p>2x1</p>
+            <p>NO TE LO PIERDAS!</p>
+        </div>
+        <div class="class-card">
+            <h4>Tratamiento anti-edad</h4>
+            <p>8 sesiones</p>
+            <p>NO TE LO PIERDAS!</p>
+        </div>
+        <div class="class-card">
+            <h4>Tratamiento anti-edad</h4>
+            <p>-30% (miercoles) </p>
+            <p>NO TE LO PIERDAS!</p>
+        </div>
+        <div class="class-card">
+            <h4>Tratamiento anti-edad</h4>
+            <p>8 sesiones</p>
+            <p>Especialista: Carmen López</p>
+        </div>
+        <div class="class-card">
+            <h4>Tratamiento anti-edad</h4>
+            <p>8 sesiones</p>
+            <p>Especialista: Carmen López</p>
+        </div>
+        <div class="class-card">
+            <h4>Tratamiento anti-edad</h4>
+            <p>8 sesiones</p>
+            <p>Especialista: Carmen López</p>
+        </div>
+    </div>
+    <button class="carousel-control next btn btn-primary mt-2">→</button>
+</div>
+
+<div class="lessons">
+    <h3>Sesiones</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Servicio</th>
+                <th>Fecha</th>
+                <th>Precio</th>
+                <th>Asistencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las sesiones se insertarán aquí dinámicamente -->
+        </tbody>
+    </table>
+</div>
+</div>
+
+<div class="profile">
+<div class="profile-picture">
+    <img src="img/usuario.jpeg" alt="Foto de perfil">
+</div>
+<div class="profile-info">
+    <h3>Nombre del Cliente</h3> <!-- Este nombre se actualizará dinámicamente -->
+    <button  id="client-id-button" >ID CLIENTE</button> <!-- Este botón mostrará el ID del cliente -->
+</div>
+           
+            <div class="calendar-wrapper">
+                <header>
+                    <p class="current-date"></p>
+                    <div class="icons">
+                        <span id="prev" class="material-symbols-rounded">←</span>
+                        <span id="next" class="material-symbols-rounded">→</span>
+                    </div>
+                </header>
+                <div class="calendar">
+                    <ul class="weeks">
+                        <li>D</li>
+                        <li>L</li>
+                        <li>M</li>
+                        <li>M</li>
+                        <li>J</li>
+                        <li>V</li>
+                        <li>S</li>
+                    </ul>
+                    <ul class="days"></ul>
+                </div>
+                
+            </div>
+            <div class="chat-wrapper chat-id-123">
+                <div class="chat-header">
+                    <h3>Regalate el día</h3>
+                </div>
+                <div class="chat-box" id="chat-box">
+                </div>
+               
+                <div class="input-box">
+                    
+                    <a href="https://wa.me/5491123456789?text=Hola, me gustaría reservar un turno!" target="_blank">
+                        <button id="send-button"></button> <!-- Botón que ahora enlaza a WhatsApp -->
+                    </a>
+                </div>
+            </div>
+
+ 
+            
+            <style>
+              
+
+
+                .input-box {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            
+                #static-message {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: normal;
+                }
+            
+                #send-button {
+                    width: 50px; /* Ajusta el ancho del botón */
+                    height: 50px; /* Ajusta la altura del botón */
+                    background-image: url('img/wppLogo.png'); /* Cambia la ruta a tu imagen */
+                    background-size: cover; /* Asegura que la imagen se ajuste al botón */
+                    background-position: center;
+                    background-color: whitesmoke;
+                    border: none; /* Elimina el borde del botón */
+                    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+                }
+            </style>
+            
+    <!-- JavaScript -->
+         
+            
+            <div class="reminders">
+                
+            </div>
+            
+        </div>
+    
+    
+     </div>
+    <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" style="color: transparent;">&times;</span>
+        <h2>Agendar Turno</h2>
+        <form id="appointmentForm">
+            <label for="appointmentDate">Fecha:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+
+            <label for="appointmentClient">Cliente (ID): </label>
+            <input type="hidden" id="appointmentClient" name="appointmentClient" required>
+            
+            <label for="appointmentCost">Costo:</label>
+            <input type="number" id="appointmentCost" name="appointmentCost" step="0.01" required>
+
+            <label for="appointmentService">Servicio:</label>
+            <select id="appointmentService" name="appointmentService" required>
+                <option value="">Selecciona un servicio</option>
+                <!-- Las opciones se llenarán dinámicamente -->
+            </select>
+
+            <label for="appointmentEstado">Estado:
+                <span style="display: inline-block; width: 10px; height: 10px; background-color: green; border-radius: 50%; vertical-align: middle;"></span>
+                <span style="vertical-align: middle; margin-left: 5px;">En proceso</span>
+            </label>
+
+            <button type="submit" class="btn btn-primary">Guardar Turno</button>
+        </form>
+    </div>
+   
+ </div>
+    <!-- Footer Start -->
+  
+    <!-- Footer End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+   <script src="js/main.js"></script>
+   <script src="js/personal.js"></script>
+   <!--<script src="js/scriptChat.js"></script>--> 
+    <script src="js/cliente.js"></script>
+
+      <style>
+        select#appointmentService {
+        font-size: 20px; /* Tamaño de letra para el desplegable */
+        padding: 10px;   /* Espaciado interno para hacer el campo más grande */
+    }
+    
+    select#appointmentService option {
+        font-size: 20px; /* Tamaño de letra para las opciones */
+    } 
+    select#appointmentService {
+        font-size: 20px; /* Tamaño de letra para el desplegable */
+        padding: 10px;   /* Espaciado interno para hacer el campo más grande */
+    }
+
+    select#appointmentService option {
+        font-size: 20px; /* Tamaño de letra para las opciones */
+    }</style>
+    <script>
+
+   
+
+    async function loadServicios() {
+        try {
+            const response = await fetch('https://overflowing-magic-production.up.railway.app/servicio/traerServicio', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                populateServicesDropdown(data);  // Llenar el dropdown con los servicios
+            } else {
+                console.error('Error al cargar los servicios:', response.statusText);
+            }
+        } catch (error) {
+            console.error('Error al conectarse al servidor:', error);
+        }
+    }
+
+    // Función para llenar el dropdown con los servicios
+    function populateServicesDropdown(servicios) {
+        const servicioSelect = document.getElementById('appointmentService');
+
+        // Limpiar las opciones actuales
+        servicioSelect.innerHTML = '<option value="">Selecciona un servicio</option>';
+
+        // Agregar opciones de servicios
+        servicios.forEach(servicio => {
+            const option = document.createElement('option');
+            option.value = servicio.id;  // Aquí va el ID del servicio
+            option.textContent = servicio.nombreServicio;  // Aquí va el nombre del servicio
+            servicioSelect.appendChild(option);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById('appointmentModal');
+        const openFormButton = document.getElementById('openFormButton');
+        const closeButton = document.querySelector('.close');
+
+        // Abre el modal cuando se hace clic en el botón
+        openFormButton.addEventListener('click', function () {
+            modal.style.display = 'block';
+        });
+
+        // Cierra el modal cuando se hace clic en el botón de cerrar (x)
+        closeButton.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        // Cierra el modal cuando se hace clic fuera del contenido del modal
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Cargar los servicios y clientes en los desplegables
+        loadServicios();
+      
+
+        // Manejar el envío del formulario
+        document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+            event.preventDefault();  // Prevenir el envío del formulario
+
+            // Obtener los datos del formulario
+            const formData = {
+                id_Cliente: parseInt(document.getElementById('appointmentClient').value),    // ID del cliente
+                id_Servicio: parseInt(document.getElementById('appointmentService').value),  // ID del servicio
+                fecha: document.getElementById('appointmentDate').value,                     // Fecha seleccionada
+                costo: parseFloat(document.getElementById('appointmentCost').value),         // Costo
+                asistencia: 1 // Valor fijo de ejemplo
+            };
+
+            console.log(formData);  // Verifica los datos que estás enviando
+
+            // Asegúrate de que el ID del cliente y el servicio sean válidos
+            if (isNaN(formData.id_Cliente) || isNaN(formData.id_Servicio)) {
+                alert("Selecciona un cliente y un servicio válidos.");
+                return;
+            }
+
+            // Configuración de la petición POST
+            const requestOptions = {
+                method: 'POST',  // Método POST para enviar datos
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            };
+
+            // Enviar los datos al servidor
+            fetch('https://overflowing-magic-production.up.railway.app/Sesion/crearDos', requestOptions)
+                .then(response => {
+                    if (response.ok) {
+                        alert('Turno agendado exitosamente.');
+                        modal.style.display = 'none';  // Cerrar el modal si se agenda exitosamente
+                    } else if (response.status === 409) {
+                        return response.text().then(message => alert('Error: ' + message));
+                    } else {
+                        return response.text().then(message => alert('Hubo un problema: ' + message));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Hubo un problema al agendar el turno.');
+                });
+        });
+    });
+</script>
+
+</body>
+
+</html>
